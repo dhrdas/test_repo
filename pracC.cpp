@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <cassert>
 
 std::vector<int> merge(std::vector<int> &nums1, int m, std::vector<int> &nums2, int n)
 {
@@ -12,7 +13,7 @@ std::vector<int> merge(std::vector<int> &nums1, int m, std::vector<int> &nums2, 
         if (midx >= 0 and nums1[midx] > nums2[nidx])
         {
             nums1[r_pos] = nums1[midx];
-            midx = -1;
+            midx -= 1;
         }
         else
         {
